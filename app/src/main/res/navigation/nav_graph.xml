@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.notesapp.fragment.splashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash">
+        <action
+            android:id="@+id/action_splashFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+
+
+        <action
+            android:id="@+id/action_splashFragment_to_signlnFragment"
+            app:destination="@id/signlnFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/signlnFragment"
+        android:name="com.example.notesapp.fragment.SignlnFragment"
+        android:label="fragment_signln"
+        tools:layout="@layout/fragment_signln">
+        <action
+            android:id="@+id/action_signlnFragment_to_signupFragment"
+            app:destination="@id/signupFragment"
+            app:popUpTo="@id/signlnFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_signlnFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/signlnFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/signupFragment"
+        android:name="com.example.notesapp.fragment.SignupFragment"
+        android:label="fragment_signup"
+        tools:layout="@layout/fragment_signup">
+        <action
+            android:id="@+id/action_signupFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/signupFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_signupFragment_to_signlnFragment"
+            app:destination="@id/signlnFragment"
+            app:popUpTo="@id/signupFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.notesapp.fragment.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+</navigation>
